@@ -1,0 +1,22 @@
+{
+  "name": "burn-tests",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate the use of cypress-grep for burning tests based on tags.",
+  "main": "index.html",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run --env grepTags=-@burn,grepOmitFiltered=true",
+    "test:burn": "cypress run --env grepTags=@burn,burn=10,grepOmitFiltered=true"
+  },
+  "keywords": [
+    "cypress testing",
+    "cypress-grep",
+    "burning tests"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "cypress-grep": "^2.13.1"
+  }
+}

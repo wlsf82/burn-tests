@@ -1,0 +1,25 @@
+name: PR tests 🧪
+on: [pull_request]
+jobs:
+  burn-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run Cypress tests with the @burn tag
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test:burn
+  other-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run Cypress tests without the @burn tag
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm test
