@@ -6,6 +6,6 @@ describe('A test suite', () => {
   })
 
   it('wait for paragraph', { tags: '@burn' }, () => {
-    cy.contains('p', 'I finally appeared.')
+    cy.contains('p', 'I finally appeared.', { timeout: 10000 })
   })
 })
