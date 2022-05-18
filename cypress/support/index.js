@@ -1,1 +1,1 @@
-const registerCypressGrep = require('cypress-grep')()
+require('cypress-grep')()
